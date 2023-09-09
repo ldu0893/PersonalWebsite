@@ -1,0 +1,136 @@
+:root {
+    --bg: #d9d9d9;
+    --text: #212121;
+    --border: #212121;
+    --font: Arial;
+}
+
+html {
+    font-family: var(--font);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 1.15rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 2; 
+}
+
+nav a {
+    color: var(--text);
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+#top-name {
+    text-align: center;
+}
+
+hr {
+    color: var(--border);
+    border-top: 1px solid var(--border);
+    margin: 0.5rem auto;
+}
+
+h1 {
+    margin: 0.5rem auto;
+}
+
+#photo-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  
+  li {
+    height: 40vh;
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    margin: 0.5rem;
+    flex: 1 0 20rem;
+    /* width: 20rem; */
+    /* height: 20rem; */
+    overflow: hidden;
+    /* max-height: 100%; */
+    /* min-width: 100%; */
+    object-fit: cover;
+    /* vertical-align: bottom; */
+  }
+
+
+.rect-img-container {
+    /* display: flex; */
+    /* position: relative; */
+    /* margin: 1rem; */
+    /* flex: 1 0 20rem; */
+    /* width: 20rem; */
+    /* height: 20rem; */
+    /* overflow: hidden; */
+    /* max-height: 100%; */
+    /* min-width: 100%; */
+    /* object-fit: cover; */
+    /* vertical-align: bottom; */
+}
+
+.rect-img-container:hover .thumb-overlay {
+    opacity: .75;
+}
+
+.rect-img-container:hover img {
+    transform: scale(1.1);
+}
+
+.thumb-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    transition: .5s ease;
+    background-color: #008CBA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 5rem;
+}
+  
+.rect-img-container::after {
+    content: "";
+    padding-bottom: 100%;
+}
+
+.rect-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
